@@ -1,0 +1,108 @@
+/* styles/App.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #0b0a0a;
+}
+
+/* Additional styles for the improved UI */
+.main-wrapper {
+  @apply relative flex items-center justify-center min-h-screen;
+  background: no-repeat center center/cover;
+}
+
+.overlay {
+  @apply absolute inset-0 bg-black opacity-50;
+}
+
+.main-content {
+  @apply flex items-center justify-center h-full;
+}
+
+.container {
+  @apply relative bg-white bg-opacity-80 p-10 rounded-lg shadow-lg max-w-md w-full;
+}
+
+h1 {
+  @apply text-4xl font-bold mb-6 text-center text-gray-800;
+}
+
+p {
+  @apply text-center mb-8 text-gray-600;
+}
+
+button {
+  @apply bg-blue-500 text-black px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 flex items-center justify-center mx-auto;
+}
+
+a {
+  @apply text-blue-500 hover:underline;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.bg-gradient-to-r {
+  animation: gradientAnimation 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.truncate {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
